@@ -15,11 +15,6 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
-      title: "Hola mundo",
-      subtitle: "Un subtitulo",
-      link: "/",
-      icon: Icons.home),
-  MenuItem(
       title: "Botones",
       subtitle: "Hola otra vez",
       link: "/buttons",
