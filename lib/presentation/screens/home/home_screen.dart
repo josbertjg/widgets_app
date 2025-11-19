@@ -3,6 +3,8 @@ import 'package:widgets_app/config/router/routes.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = "home_screen";
+
   const HomeScreen({super.key});
 
   @override
@@ -26,6 +28,7 @@ class _HomeView extends StatelessWidget {
         itemCount: appRoutes.length,
         itemBuilder: (context, index) {
           final routeItem = appRoutes[index];
+          if (routeItem.name == HomeScreen.name) return const SizedBox();
           return _CustomListTile(routeItem: routeItem);
         });
   }
@@ -48,7 +51,7 @@ class _CustomListTile extends StatelessWidget {
       leading: Icon(routeItem.icon, color: colors.primary),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
       onTap: () {
-        context.push(routeItem.link);
+        context.pushNamed(routeItem.name);
       },
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../presentation/screens/screens.dart';
 
 class RouteItem {
@@ -8,6 +7,7 @@ class RouteItem {
   final String link;
   final IconData icon;
   final Widget screen;
+  final String name;
 
   const RouteItem({
     required this.title,
@@ -15,26 +15,30 @@ class RouteItem {
     required this.link,
     required this.icon,
     required this.screen,
+    required this.name,
   });
 }
 
 const appRoutes = <RouteItem>[
   RouteItem(
+      name: HomeScreen.name,
+      title: "Home",
+      subtitle: "Pantalla de inicio",
+      link: "/",
+      icon: Icons.home,
+      screen: HomeScreen()),
+  RouteItem(
+      name: ButtonsScreen.name,
       title: "Botones",
       subtitle: "Hola otra vez",
       link: "/buttons",
       icon: Icons.favorite,
       screen: ButtonsScreen()),
   RouteItem(
+      name: CardsScreen.name,
       title: "Tarjetas",
       subtitle: "Hola otra vez",
       link: "/cards",
       icon: Icons.credit_card,
-      screen: CardsScreen()),
-  RouteItem(
-      title: "Hola",
-      subtitle: "Hola otra jejejejej",
-      link: "/cards",
-      icon: Icons.ac_unit_rounded,
       screen: CardsScreen()),
 ];
