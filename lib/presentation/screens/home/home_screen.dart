@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/config/router/routes.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,33 +23,32 @@ class _HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
         physics: const BouncingScrollPhysics(),
-        itemCount: appMenuItems.length,
+        itemCount: appRoutes.length,
         itemBuilder: (context, index) {
-          final menuItem = appMenuItems[index];
-          return _CustomListTile(menuItem: menuItem);
+          final routeItem = appRoutes[index];
+          return _CustomListTile(routeItem: routeItem);
         });
   }
 }
 
 class _CustomListTile extends StatelessWidget {
   const _CustomListTile({
-    required this.menuItem,
+    required this.routeItem,
   });
 
-  final MenuItem menuItem;
+  final RouteItem routeItem;
 
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
-      title: Text(menuItem.title),
-      subtitle: Text(menuItem.subtitle),
-      leading: Icon(menuItem.icon, color: colors.primary),
+      title: Text(routeItem.title),
+      subtitle: Text(routeItem.subtitle),
+      leading: Icon(routeItem.icon, color: colors.primary),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
-      // dense: true,
       onTap: () {
-        Navigator.pushNamed(context, menuItem.link);
+        context.push(routeItem.link);
       },
     );
   }
