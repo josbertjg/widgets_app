@@ -69,4 +69,11 @@ const appRoutes = <RouteItem>[
       link: "/ui-controls",
       icon: Icons.car_rental_outlined,
       screen: UiControlsScreen()),
+  RouteItem(
+      name: AppTutorialScreen.name,
+      title: "Introduccion a la aplicación",
+      subtitle: "Pequeño tutorial introductorio",
+      link: "/tutorial",
+      icon: Icons.accessible_rounded,
+      screen: AppTutorialScreen()),
 ];
