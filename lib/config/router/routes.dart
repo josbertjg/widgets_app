@@ -48,4 +48,11 @@ const appRoutes = <RouteItem>[
       link: "/progress",
       icon: Icons.refresh_rounded,
       screen: ProgressScreen()),
+  RouteItem(
+      name: SnackbarScreen.name,
+      title: "Snackbars Y Dialogs",
+      subtitle: "Hola otra vez",
+      link: "/snackbars",
+      icon: Icons.info_outline,
+      screen: SnackbarScreen()),
 ];
