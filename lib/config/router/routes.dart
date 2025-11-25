@@ -41,4 +41,11 @@ const appRoutes = <RouteItem>[
       link: "/cards",
       icon: Icons.credit_card,
       screen: CardsScreen()),
+  RouteItem(
+      name: ProgressScreen.name,
+      title: "Progress Indicators",
+      subtitle: "Hola otra vez",
+      link: "/progress",
+      icon: Icons.refresh_rounded,
+      screen: ProgressScreen()),
 ];
