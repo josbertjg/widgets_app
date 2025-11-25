@@ -62,4 +62,11 @@ const appRoutes = <RouteItem>[
       link: "/animated",
       icon: Icons.check_box_outline_blank_rounded,
       screen: AnimatedScreen()),
+  RouteItem(
+      name: UiControlsScreen.name,
+      title: "UI Controls + Tiles",
+      subtitle: "Una serie de controles de flutter",
+      link: "/ui-controls",
+      icon: Icons.car_rental_outlined,
+      screen: UiControlsScreen()),
 ];
