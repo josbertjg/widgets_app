@@ -76,4 +76,11 @@ const appRoutes = <RouteItem>[
       link: "/tutorial",
       icon: Icons.accessible_rounded,
       screen: AppTutorialScreen()),
+  RouteItem(
+      name: InfiniteScrollScreen.name,
+      title: "Infinite Scroll y Pull",
+      subtitle: "Vistas infinitas y pull tu refresh",
+      link: "/infinite",
+      icon: Icons.list_alt_rounded,
+      screen: InfiniteScrollScreen()),
 ];
