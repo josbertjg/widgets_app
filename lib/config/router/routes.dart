@@ -83,4 +83,18 @@ const appRoutes = <RouteItem>[
       link: "/infinite",
       icon: Icons.list_alt_rounded,
       screen: InfiniteScrollScreen()),
+  RouteItem(
+      name: CounterScreen.name,
+      title: "Riverpod Counter",
+      subtitle: "Introducción a riverpod",
+      link: "/counter-screen",
+      icon: Icons.add,
+      screen: CounterScreen()),
+  RouteItem(
+      name: ThemeChangerScreen.name,
+      title: "Cambiar Tema",
+      subtitle: "Cambiar tema de la aplicacion",
+      link: "/theme-changer",
+      icon: Icons.color_lens_outlined,
+      screen: ThemeChangerScreen()),
 ];
